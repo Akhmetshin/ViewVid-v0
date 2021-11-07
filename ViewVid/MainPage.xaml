@@ -1,0 +1,31 @@
+﻿<Page Height="900"
+    x:Class="ViewVid.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ViewVid"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="layoutRoot" Height="900">
+        <!--параметр AreTransportControlsEnabled надо бы сделать управляемым. иногда органы управления могут мешать-->
+        <MediaPlayerElement x:Name="mediaPlayerElement"
+                            AutoPlay="False" Stretch="Fill"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            PointerPressed="MediaPlayerElement_PointerPressed"
+                            Height="800"
+                            Width="1400"
+                            AreTransportControlsEnabled="True"/>
+        <Canvas x:Name="canvas" HorizontalAlignment="Center" Width="1370" Height="128" Margin="0,700"/>
+        <Button x:Name="pickFileButton" Content="Open" Click="PickFileButton_ClickAsync" Margin="10,858,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Folder" Content="Folder" Click="Folder_ClickAsync" Margin="89,858,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Image" Content="image" Click="Image_Click" Margin="317,858,0,0" VerticalAlignment="Top" Background="Cyan"/> <!--поиграл цветом-->
+        <TextBlock x:Name="notify1" Height="20" Text="notify1" Margin="404,865,654,15"/>
+        <Button x:Name="Process" Content="PROCESS" Click="Process_Click" Margin="885,858,0,0" VerticalAlignment="Top" IsEnabled="False" Background="{ThemeResource SystemControlHighlightAltAccentBrush}"/> <!--и вот так-->
+        <Button x:Name="close" Content="Close" Click="Close_Click" Width="80" Margin="1410,858,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="notify2" Height="20" Width="200" Text="notify2" Margin="996,865,304,15"/>
+        <Button x:Name="diagr" Content="DIAGR" Click="Diagr_Click" Margin="1222,858,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+    </Grid>
+</Page>

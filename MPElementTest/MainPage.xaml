@@ -1,0 +1,19 @@
+﻿<Page Height="900" Width="1600"
+    x:Class="MPElementTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="layoutRoot" Height="900" Width="1600">
+        <MediaPlayerElement Name="mediaPlayerElement" AutoPlay="False" AreTransportControlsEnabled="True" Height="800" VerticalAlignment="Top"/>
+        <Button x:Name="open" Content="Open" Click="Open_ClickAsync" Margin="10,858,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="StepForwardOneFrame" Content="StepForwardOneFrame" Click="StepForwardOneFrame_Test_Click" Margin="154,858,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="test" Content="Test1" Click="Test1_Click" Margin="382,858,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="notify" Text="notify" Height="25" Margin="454,861,448,14"/>
+        <Button x:Name="frequency" Content="frequency" Click="frequency_Click" Margin="1098,858,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="exit" Content="Exit" Click="exit_Click" Margin="1440,858,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
